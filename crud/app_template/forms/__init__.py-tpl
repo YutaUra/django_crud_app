@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 
-from crud.models import {{ camel_case_app_name }}
+from {{ app_name }}.models import {{ camel_case_app_name }}
 
 
 class {{ camel_case_app_name }}Form(ModelForm):
