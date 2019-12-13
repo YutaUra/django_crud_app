@@ -1,0 +1,5 @@
+from django.contrib.admin import site
+from .admin import {{ camel_case_app_name }}Admin
+from crud.models import {{ camel_case_app_name }}
+
+site.register({{ camel_case_app_name }}, {{ camel_case_app_name }}Admin)

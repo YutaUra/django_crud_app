@@ -1,0 +1,15 @@
+{% extends "crud/base.html" %}
+{% load i18n %}
+{% block content %}
+    <div>
+        {% for object in object_list %}
+            <div>
+                <h4>{{ object.name }}</h4>
+                <p>{% trans 'created_at' %}:{{ object.created_at }}</p>
+                <p>{% trans 'updated_at' %}:{{ object.updated_at }}</p>
+                <a href="{% url 'update' pk=object.pk %}">{% trans 'update' %}</a>
+                <a href="{% url 'delete' pk=object.pk %}">{% trans 'delete' %}</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

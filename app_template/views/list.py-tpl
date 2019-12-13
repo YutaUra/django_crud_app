@@ -1,0 +1,7 @@
+from django.views.generic import ListView
+from {{ app_name }}.models import {{ camel_case_app_name }}
+
+
+class {{ camel_case_app_name }}ListView(ListView):
+    model = {{ camel_case_app_name }}
+    template_name = '{{ app_name }}/list.html'

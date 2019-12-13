@@ -1,0 +1,13 @@
+from django.urls import reverse
+from django.views.generic import UpdateView
+from {{ app_name }}.forms import {{ camel_case_app_name }}Form
+from {{ app_name }}.models import {{ camel_case_app_name }}
+
+
+class {{ camel_case_app_name }}UpdateView(UpdateView):
+    model = {{ camel_case_app_name }}
+    form_class = {{ camel_case_app_name }}Form
+    template_name = '{{ app_name }}/update.html'
+
+    def get_success_url(self):
+        return reverse('detail', kwargs={'pk': self.object.pk})

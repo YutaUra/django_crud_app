@@ -1,0 +1,11 @@
+{% extends "crud/base.html" %}
+{% load i18n %}
+{% block content %}
+    <div>
+        <h4>{{ object.name }}</h4>
+        <p>{% trans 'created_at' %}:{{ object.created_at }}</p>
+        <p>{% trans 'updated_at' %}:{{ object.updated_at }}</p>
+        <a href="javascript:void(0);" onclick="window.history.back();">{% trans 'return' %}</a>
+    </div>
+    <a href="{% url 'list' %}">{% trans 'list' %}</a>
+{% endblock %}

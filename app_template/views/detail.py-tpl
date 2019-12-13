@@ -1,0 +1,7 @@
+from django.views.generic import DetailView
+from {{ app_name }}.models import {{ camel_case_app_name }}
+
+
+class {{ camel_case_app_name }}DetailView(DetailView):
+    model = {{ camel_case_app_name }}
+    template_name = '{{ app_name }}/detail.html'

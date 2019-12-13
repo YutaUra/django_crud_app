@@ -1,0 +1,5 @@
+from django.contrib import admin
+
+
+class {{ camel_case_app_name }}Admin(admin.ModelAdmin):
+    pass

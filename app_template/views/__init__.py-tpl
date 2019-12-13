@@ -1,0 +1,5 @@
+from .create import {{ camel_case_app_name }}CreateView
+from .detail import {{ camel_case_app_name }}DetailView
+from .list import {{ camel_case_app_name }}ListView
+from .update import {{ camel_case_app_name }}UpdateView
+from .delete import {{ camel_case_app_name }}DeleteView
