@@ -6,4 +6,5 @@ urlpatterns = [
     path('detail/<pk>/', v.CRUDDetailView.as_view(), name='detail'),
     path('list/', v.CRUDListView.as_view(), name='list'),
     path('update/<pk>/', v.CRUDUpdateView.as_view(), name='update'),
+    path('delete/<pk>/', v.CRUDDeleteView.as_view(), name='delete'),
 ]
