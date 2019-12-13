@@ -1,2 +1,5 @@
 db.sqlite3
 *.pyc
+dist
+build
+django_crud_app.egg-info

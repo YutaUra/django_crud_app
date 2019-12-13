@@ -16,7 +16,7 @@ setup(
     license='MIT License',
     description='Easy start crud app',
     long_description=README.decode(),
-    url='',
+    url='https://github.com/YutaUra/django_crud_app',
     author='Yuta Ura',
     author_email='yuuta3594@outlook.jp',
     classifiers=[
