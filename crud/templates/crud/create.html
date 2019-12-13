@@ -1,2 +1,9 @@
 {% extends 'crud/base.html' %}
-{{ form.as_p }}
+{% block content %}
+    Create
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>submit</button>
+    </form>
+{% endblock %}
