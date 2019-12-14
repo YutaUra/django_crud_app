@@ -10,4 +10,4 @@ class {{ camel_case_app_name }}UpdateView(UpdateView):
     template_name = '{{ app_name }}/update.html'
 
     def get_success_url(self):
-        return reverse('detail', kwargs={'pk': self.object.pk})
+        return reverse('{{ app_name }}:detail', kwargs={'pk': self.object.pk})

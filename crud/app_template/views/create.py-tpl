@@ -10,4 +10,4 @@ class {{ camel_case_app_name }}CreateView(CreateView):
     template_name = '{{ app_name }}/create.html'
 
     def get_success_url(self):
-        return reverse('detail', kwargs={'pk': self.object.pk})
+        return reverse('{{ app_name }}:detail', kwargs={'pk': self.object.pk})

@@ -7,8 +7,9 @@
                 <h4>{{ object.name }}</h4>
                 <p>{% trans 'created_at' %}:{{ object.created_at }}</p>
                 <p>{% trans 'updated_at' %}:{{ object.updated_at }}</p>
-                <a href="{% url 'update' pk=object.pk %}">{% trans 'update' %}</a>
-                <a href="{% url 'delete' pk=object.pk %}">{% trans 'delete' %}</a>
+                <a href="{% url '{{ app_name }}:update' pk=object.pk %}">{% trans 'update' %}</a>
+                <a href="{% url '{{ app_name }}:detail' pk=object.pk %}">{% trans 'detail' %}</a>
+                <a href="{% url '{{ app_name }}:delete' pk=object.pk %}">{% trans 'delete' %}</a>
             </div>
         {% endfor %}
     </div>

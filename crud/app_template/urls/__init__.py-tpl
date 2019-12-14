@@ -1,6 +1,7 @@
 from django.urls import path
 from {{ app_name }} import views as v
 
+app_name = '{{ app_name }}'
 urlpatterns = [
     path('create/', v.{{ camel_case_app_name }}CreateView.as_view(), name='create'),
     path('detail/<pk>/', v.{{ camel_case_app_name }}DetailView.as_view(), name='detail'),

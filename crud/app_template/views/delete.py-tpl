@@ -8,4 +8,4 @@ class {{ camel_case_app_name }}DeleteView(DeleteView):
     template_name = '{{ app_name }}/delete.html'
 
     def get_success_url(self):
-        return reverse('list')
+        return reverse('{{ app_name }}:list')
