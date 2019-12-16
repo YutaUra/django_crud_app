@@ -5,3 +5,5 @@ build
 django_crud_app.egg-info
 .pypirc
 django_crud_app
+manage.py
+crud_test
