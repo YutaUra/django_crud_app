@@ -1,0 +1,11 @@
+{% extends "{{ user_name }}/base.html" %}
+{% load i18n %}
+{% block content %}
+    <form action="" method="POST">
+        <div class="card-body">
+            {{ form.as_p }}
+            <button type="submit">{% trans 'login' %}</button>
+            {% csrf_token %}
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,11 @@
+from django.urls import reverse
+from django.views.generic import DeleteView
+from {{ user_name }}.models import {{ model_name }}
+
+
+class {{ model_name }}DeleteView(DeleteView):
+    model = {{ model_name }}
+    template_name = '{{ user_name }}/delete.html'
+
+    def get_success_url(self):
+        return reverse('{{ user_name }}:list')

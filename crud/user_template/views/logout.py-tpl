@@ -1,0 +1,6 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import LogoutView
+
+
+class {{ model_name }}LogoutView(LoginRequiredMixin, LogoutView):
+    template_name = '{{ user_name }}/logout.html'

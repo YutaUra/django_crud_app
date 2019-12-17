@@ -1,0 +1,13 @@
+from django.urls import reverse
+from django.views.generic import UpdateView
+from {{ user_name }}.forms import {{ model_name }}CreateForm
+from {{ user_name }}.models import {{ model_name }}
+
+
+class {{ model_name }}UpdateView(UpdateView):
+    model = {{ model_name }}
+    form_class = {{ model_name }}CreateForm
+    template_name = '{{ user_name }}/update.html'
+
+    def get_success_url(self):
+        return reverse('{{ user_name }}:detail', kwargs={'pk': self.object.pk})

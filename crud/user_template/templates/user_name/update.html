@@ -1,0 +1,11 @@
+{% extends '{{ user_name }}/base.html' %}
+{% load i18n %}
+{% block content %}
+    Update
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>submit</button>
+    </form>
+    <a href="{% url '{{ user_name }}:list'%}">{% trans 'list' %}</a>
+{% endblock %}

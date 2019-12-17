@@ -1,0 +1,5 @@
+from django.apps import AppConfig
+
+
+class {{ camel_case_user_name }}Config(AppConfig):
+    name = '{{ user_name }}'

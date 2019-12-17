@@ -1,0 +1,1 @@
+from .{{ snake_case_model_name }} import {{ model_name }}

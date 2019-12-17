@@ -1,0 +1,13 @@
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UsernameField
+from {{ user_name }}.models import {{ model_name }}
+
+
+class {{ model_name }}CreateForm(UserCreationForm):
+    class Meta:
+        model = {{ model_name }}
+        fields = ('username', )
+        field_classes = {'username': UsernameField}
+
+class {{ model_name }}LoginForm(AuthenticationForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
