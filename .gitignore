@@ -7,3 +7,4 @@ django_crud_app.egg-info
 django_crud_app
 manage.py
 crud_test
+requirements.txt

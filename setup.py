@@ -9,13 +9,14 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-crud-app',
-    version='0.1.2',
+    version='0.2.0',
     packages=find_packages(exclude=('django_crud_app',)),
     tall_requires=['django', ],
     include_package_data=True,
     license='MIT License',
     description='Easy start crud app',
-    long_description=README.decode(),
+    long_description=README,
+    long_description_content_type='text/markdown',
     url='https://github.com/YutaUra/django_crud_app',
     author='Yuta Ura',
     author_email='yuuta3594@outlook.jp',
