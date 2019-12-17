@@ -1,9 +1,9 @@
 from django.forms import ModelForm
 
-from {{ app_name }}.models import {{ camel_case_app_name }}
+from {{ app_name }}.models import {{ model_name }}
 
 
-class {{ camel_case_app_name }}Form(ModelForm):
+class {{ model_name }}Form(ModelForm):
     class Meta:
-        model = {{ camel_case_app_name }}
+        model = {{ model_name }}
         fields = ('name',)

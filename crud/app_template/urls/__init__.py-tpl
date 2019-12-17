@@ -3,9 +3,9 @@ from {{ app_name }} import views as v
 
 app_name = '{{ app_name }}'
 urlpatterns = [
-    path('create/', v.{{ camel_case_app_name }}CreateView.as_view(), name='create'),
-    path('detail/<pk>/', v.{{ camel_case_app_name }}DetailView.as_view(), name='detail'),
-    path('list/', v.{{ camel_case_app_name }}ListView.as_view(), name='list'),
-    path('update/<pk>/', v.{{ camel_case_app_name }}UpdateView.as_view(), name='update'),
-    path('delete/<pk>/', v.{{ camel_case_app_name }}DeleteView.as_view(), name='delete'),
+    path('create/', v.{{ model_name }}CreateView.as_view(), name='create'),
+    path('detail/<pk>/', v.{{ model_name }}DetailView.as_view(), name='detail'),
+    path('list/', v.{{ model_name }}ListView.as_view(), name='list'),
+    path('update/<pk>/', v.{{ model_name }}UpdateView.as_view(), name='update'),
+    path('delete/<pk>/', v.{{ model_name }}DeleteView.as_view(), name='delete'),
 ]

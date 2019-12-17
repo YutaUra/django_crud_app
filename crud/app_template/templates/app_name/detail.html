@@ -1,4 +1,4 @@
-{% extends "crud/base.html" %}
+{% extends "{{ app_name }}/base.html" %}
 {% load i18n %}
 {% block content %}
     <div>
@@ -7,5 +7,5 @@
         <p>{% trans 'updated_at' %}:{{ object.updated_at }}</p>
         <a href="javascript:void(0);" onclick="window.history.back();">{% trans 'return' %}</a>
     </div>
-    <a href="{% url 'list' %}">{% trans 'list' %}</a>
+    <a href="{% url '{{ app_name }}:list' %}">{% trans 'list' %}</a>
 {% endblock %}

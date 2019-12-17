@@ -1,10 +1,10 @@
 from django.urls import reverse
 from django.views.generic import DeleteView
-from {{ app_name }}.models import {{ camel_case_app_name }}
+from {{ app_name }}.models import {{ model_name }}
 
 
-class {{ camel_case_app_name }}DeleteView(DeleteView):
-    model = {{ camel_case_app_name }}
+class {{ model_name }}DeleteView(DeleteView):
+    model = {{ model_name }}
     template_name = '{{ app_name }}/delete.html'
 
     def get_success_url(self):

@@ -1,12 +1,12 @@
 from django.urls import reverse
 from django.views.generic import UpdateView
-from {{ app_name }}.forms import {{ camel_case_app_name }}Form
-from {{ app_name }}.models import {{ camel_case_app_name }}
+from {{ app_name }}.forms import {{ model_name }}Form
+from {{ app_name }}.models import {{ model_name }}
 
 
-class {{ camel_case_app_name }}UpdateView(UpdateView):
-    model = {{ camel_case_app_name }}
-    form_class = {{ camel_case_app_name }}Form
+class {{ model_name }}UpdateView(UpdateView):
+    model = {{ model_name }}
+    form_class = {{ model_name }}Form
     template_name = '{{ app_name }}/update.html'
 
     def get_success_url(self):

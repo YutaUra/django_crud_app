@@ -153,7 +153,7 @@ class MyTemplateCommand(TemplateCommand):
                     with open(old_path, encoding='utf-8') as html_file:
                         content = html_file.read()
                     for key, value in context.dicts[1].items():
-                        if key == 'user_directory':
+                        if key.endswith('_directory'):
                             continue
                         content = re.sub(r'{{\s*' + str(key) + r'\s*}}', str(value), content)
                     with open(new_path, 'w', encoding='utf-8') as new_file:
