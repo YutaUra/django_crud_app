@@ -1,7 +1,7 @@
 import os
 from setuptools import find_packages, setup
 
-with open(os.path.join(os.path.dirname(__file__), 'README.md'), 'rb') as readme:
+with open(os.path.join(os.path.dirname(__file__), 'README.md'), 'r') as readme:
     README = readme.read()
 
 # allow setup.py to be run from any path
@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-crud-app',
-    version='0.2.0',
+    version='0.2.1',
     packages=find_packages(exclude=('django_crud_app',)),
     tall_requires=['django', ],
     include_package_data=True,
