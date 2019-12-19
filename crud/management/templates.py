@@ -60,7 +60,7 @@ class MyTemplateCommand(TemplateCommand):
         self.paths_to_remove = []
         self.verbosity = options['verbosity']
 
-        self.validate_name(name)
+        self.validate_name(name, 'name')
 
         # if some directory is given, make sure it's nicely expanded
         top_dir = os.path.join(os.getcwd(), name)

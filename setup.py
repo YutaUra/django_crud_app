@@ -9,8 +9,8 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-crud-app',
-    version='0.2.2',
-    packages=find_packages(exclude=('django_crud_app',)),
+    version='0.2.3',
+    packages=find_packages(exclude=('crud_test', 'venv')),
     tall_requires=['django', ],
     include_package_data=True,
     license='MIT License',
